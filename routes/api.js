@@ -8,17 +8,15 @@ const NetworkData = require('../models/networkData');
 });*/
 
 router.get('/register', function(req, res, next) {
-    /*NetworkData.find({networkName : req.query.networkName}).then(function (data) {
+    NetworkData.find({networkName : req.query.networkName}).then(function (data) {
         res.send(data);
 
-    });*/
-    res.send("successful");
+    });
 });
 
 router.post('/register', function(req, res, next) {
     NetworkData.create(req.body).then(function (data) {
-        console.log('inside  post');
-        res.send("success");
+        res.send(data);
     });
 });
 

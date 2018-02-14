@@ -9,7 +9,8 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/NetworkSignal');
+// mongoose.connect('mongodb://localhost/NetworkSignal');
+mongoose.connect('mongodb://root:root@ds235328.mlab.com:35328/networkdata');
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
