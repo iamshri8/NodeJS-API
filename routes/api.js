@@ -8,10 +8,11 @@ const NetworkData = require('../models/networkData');
 });*/
 
 router.get('/register', function(req, res, next) {
-    NetworkData.find({networkName : req.query.networkName}).then(function (data) {
+    /*NetworkData.find({networkName : req.query.networkName}).then(function (data) {
         res.send(data);
 
-    });
+    });*/
+    res.send("successful");
 });
 
 router.post('/register', function(req, res, next) {
